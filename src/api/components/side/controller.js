@@ -1,11 +1,10 @@
-import Burritos from "./model.ts";
-import { Request, Response } from "express";
+import Side from "./model.js";
 import { StatusCodes, getReasonPhrase } from "http-status-codes";
 
-export async function getBurritos(req: Request, res: Response) {
+export async function getSide(req, res) {
 	try {
-		const burritos = await Burritos.findAll();
-		res.status(200).json(burritos);
+		const sides = await Side.findAll();
+		res.status(200).json(sides);
 	} catch (error) {
 		res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
 			message: getReasonPhrase(StatusCodes.INTERNAL_SERVER_ERROR),

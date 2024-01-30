@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import db from "../../../config/globals.ts";
+import db from "../../../config/globals.js";
 
 const Sandwiches = db.define(
 	"sandwich",

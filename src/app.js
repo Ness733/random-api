@@ -2,13 +2,13 @@ import express from "express";
 import helmet from "helmet";
 import cors from "cors";
 
-import db from "./config/globals.ts";
+import db from "./config/globals.js";
 
 // Routers
-import burgerRouter from "./api/components/burgers/routes.ts";
-import sideRouter from "./api/components/side/routes.ts";
-import burritosRouter from "./api/components/burritos/routes.ts";
-import sandwichRouter from "./api/components/sandwiches/routes.ts";
+import burgerRouter from "./api/components/burgers/routes.js";
+import sideRouter from "./api/components/side/routes.js";
+import burritosRouter from "./api/components/burritos/routes.js";
+import sandwichRouter from "./api/components/sandwiches/routes.js";
 
 const app = express();
 

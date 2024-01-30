@@ -2,7 +2,7 @@ import express from "express";
 
 const burritosRouter = express.Router();
 
-import { getBurritos } from "./controller.ts";
+import { getBurritos } from "./controller.js";
 
 burritosRouter.get("/burritos", getBurritos);
 

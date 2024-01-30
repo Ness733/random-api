@@ -1,8 +1,7 @@
-import Sandwiches from "./model.ts";
-import { Request, Response } from "express";
+import Sandwiches from "./model.js";
 import { StatusCodes, getReasonPhrase } from "http-status-codes";
 
-export async function getSandwiches(req: Request, res: Response) {
+export async function getSandwiches(req, res) {
 	try {
 		const sandwiches = await Sandwiches.findAll();
 		res.status(200).json(sandwiches);
